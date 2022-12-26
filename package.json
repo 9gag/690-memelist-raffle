@@ -1,0 +1,13 @@
+{
+  "name": "690-memelist-raffle",
+  "license": "MIT",
+  "scripts": {
+    "raffle": "tsx src/raffle.ts > data/winners.json",
+    "format": "tsx src/format.ts > README.md"
+  },
+  "dependencies": {
+    "lotto-draw": "^1.0.2",
+    "tablemark": "^3.0.0",
+    "tsx": "^3.12.1"
+  }
+}

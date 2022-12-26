@@ -1,0 +1,20 @@
+name: 690 Memelist Raffle
+
+on:
+  workflow_dispatch:
+
+jobs:
+  raffle:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+
+      - name: Run raffle
+        run: yarn && yarn raffle && yarn format
+
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Raffle Winners
+          commit_author: 9gagceo <9gagceo@9gag.com>
